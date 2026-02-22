@@ -53,9 +53,11 @@ public class UserController {
     }
 //    @PostMapping("/create/register")
 //    public ResponseEntity<Map<String, Object>> createUserCustom(@RequestBody User user){
-//        Map<String, Object> response = new HashMap<>();
-//        response.put("message","User registered");
-//        response.put("user", user);
+////        Map<String, Object> response = new HashMap<>();
+////        response.put("message","User registered");
+////        response.put("user", user);
+//
+//    Map<String, Object> response = Map.of("message","user registered","user", user);
 //
 //        //return ResponseEntity.ok(user);
 //        return ResponseEntity.status(HttpStatus.CREATED).body(response);
