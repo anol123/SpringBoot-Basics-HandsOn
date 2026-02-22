@@ -1,6 +1,7 @@
 package com.example.springBootLearning_1.controller;
 
 import com.example.springBootLearning_1.model.User;
+import com.example.springBootLearning_1.model.UserResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -50,14 +51,21 @@ public class UserController {
         //return ResponseEntity.ok(user);
         return ResponseEntity.status(HttpStatus.CREATED).body(user);
     }
-    @PostMapping("/create/register")
-    public ResponseEntity<Map<String, Object>> createUserCustom(@RequestBody User user){
-        Map<String, Object> response = new HashMap<>();
-        response.put("message","User registered");
-        response.put("user", user);
+//    @PostMapping("/create/register")
+//    public ResponseEntity<Map<String, Object>> createUserCustom(@RequestBody User user){
+//        Map<String, Object> response = new HashMap<>();
+//        response.put("message","User registered");
+//        response.put("user", user);
+//
+//        //return ResponseEntity.ok(user);
+//        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+//    }
+@PostMapping("/create/register")
+public ResponseEntity<UserResponse> createUserCustom(@RequestBody User user){
+    //UserResponse response = new UserResponse("User registered",user);
 
-        //return ResponseEntity.ok(user);
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
-    }
+    //return ResponseEntity.ok(user);
+    return ResponseEntity.status(HttpStatus.CREATED).body(new UserResponse("User registered",user));
+}
 
 }
