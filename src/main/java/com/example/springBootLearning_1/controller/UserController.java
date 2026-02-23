@@ -62,12 +62,16 @@ public class UserController {
 //        //return ResponseEntity.ok(user);
 //        return ResponseEntity.status(HttpStatus.CREATED).body(response);
 //    }
-@PostMapping("/create/register")
-public ResponseEntity<UserResponse> createUserCustom(@RequestBody User user){
-    //UserResponse response = new UserResponse("User registered",user);
+    @PostMapping("/create/register")
+    public ResponseEntity<UserResponse> createUserCustom(@RequestBody User user){
+        //UserResponse response = new UserResponse("User registered",user);
 
-    //return ResponseEntity.ok(user);
-    return ResponseEntity.status(HttpStatus.CREATED).body(new UserResponse("User registered",user));
-}
+        //return ResponseEntity.ok(user);
+        return ResponseEntity.status(HttpStatus.CREATED).body(new UserResponse("User registered",user));
+    }
+
+
+
+
 
 }
