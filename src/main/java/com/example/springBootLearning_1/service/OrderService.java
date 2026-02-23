@@ -11,6 +11,6 @@ public class OrderService {
     }
 
     public String getPaymentStatus(){
-        return paymentService.getPayment();
+        return "Order Service: "+paymentService.getPayment();
     }
 }

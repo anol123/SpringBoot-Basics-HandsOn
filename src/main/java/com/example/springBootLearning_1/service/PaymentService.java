@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PaymentService {
     public String getPayment(){
-        return " Payment Service";
+        return "Payment Service";
     }
 
 }
