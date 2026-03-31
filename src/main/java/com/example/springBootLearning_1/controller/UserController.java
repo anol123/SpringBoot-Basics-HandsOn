@@ -37,15 +37,15 @@ public class UserController {
         return new User(id, name,27);
     }
 
-    @PostMapping
-    public String test2(){
-        return "Post method is hit";
-    }
+    // @PostMapping
+    // public String test2(){
+    //     return "Post method is hit";
+    // }
 
-    @PostMapping("/create")
-    public User createUser(@RequestBody User user){
-        return user;
-    }
+    // @PostMapping("/create")
+    // public User createUser(@RequestBody User user){
+    //     return user;
+    // }
     @PostMapping("/create/http")
     public ResponseEntity<User> createUserHttp(@RequestBody User user){
         //return ResponseEntity.ok(user);
