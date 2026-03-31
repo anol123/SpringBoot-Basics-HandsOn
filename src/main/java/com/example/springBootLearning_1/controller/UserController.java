@@ -37,10 +37,10 @@ public class UserController {
         return new User(id, name,27);
     }
 
-    // @PostMapping
-    // public String test2(){
-    //     return "Post method is hit";
-    // }
+    @PostMapping
+    public String test2(){
+        return "Post method is hit";
+    }
 
     @PostMapping("/create")
     public User createUser(@RequestBody User user){
